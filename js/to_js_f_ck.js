@@ -62,36 +62,37 @@ const letters = strings.reduce((acc, expression) => {
     }
     return acc
 }, {})
-const transform = (program) => {
-    const expression = `[]['sort']['constructor']('${program}')()`
+const encodeProgram = (program) => {
+    const encoded = []
     const encodeFromLetters = encodeFromKnown(letters)
-    return expression.replace(/'([^']+)'/g, (_match, group) => {
-        const replacement = []
-        for (let index = 0; index < group.length; index++) {
-            const letter = group[index];
-            if (letter.match(/[0-9]/)) {
-                replacement.push(`(${digitEncoder(letter)}+[])`)
-            } else if (Object.prototype.hasOwnProperty.call(letters, letter)) {
-                replacement.push(letters[letter])
-            } else {
-                let lastUnknown
-                const codes = [letter.charCodeAt(0).toString(16).toLowerCase()]
-                for (let j = index + 1; j < group.length; j++) {
-                    const l = group[j];
-                    if (l.match(/[0-9]/) || Object.prototype.hasOwnProperty.call(letters, l)) {
-                        lastUnknown = j-1
-                        break
-                    } else {
-                        codes.push(group.charCodeAt(j).toString(16).toLowerCase())
-                    }
+    for (let index = 0; index < program.length; index++) {
+        const letter = program[index];
+        if (letter.match(/[0-9]/)) {
+            encoded.push(`(${digitEncoder(letter)}+[])`)
+        } else if (Object.prototype.hasOwnProperty.call(letters, letter)) {
+            encoded.push(letters[letter])
+        } else {
+            let lastUnknown
+            const codes = [letter.charCodeAt(0).toString(16).toLowerCase()]
+            for (let j = index + 1; j < program.length; j++) {
+                const l = program[j];
+                if (l.match(/[0-9]/) || Object.prototype.hasOwnProperty.call(letters, l)) {
+                    lastUnknown = j-1
+                    break
+                } else {
+                    codes.push(program.charCodeAt(j).toString(16).toLowerCase())
                 }
-                index = lastUnknown || group.length-1
-                replacement.push(encodeFromLetters(`[]['sort']['constructor']('return unescape')()('%${codes.join("%")}')`))
             }
+            index = lastUnknown || program.length-1
+            encoded.push(encodeFromLetters(`[]['sort']['constructor']('return unescape')()('%${codes.join("%")}')`))
         }
-        return `(${replacement.join("+")})`
-    })
+    }
+    return `(${encoded.join("+")})`
+}
+const transform = (program) => {
+    const expression = `[]['sort']['constructor'](${encodeProgram(program)})()`
+    return encodeFromKnown(letters)(expression)
 }
 
 // console.log(letters)
-console.log(transform('alert("!!!!!!!!!!!!!!!")'))
+console.log(transform(`alert("!!''''''!!!!!!!!!'''''!!!!")`))
