@@ -1,0 +1,1 @@
+j=%Q[Function("j", "r", "q", global.j="console.log(`j=%Q[Function(${q}j${q}, ${q}r${q}, ${q}q${q}, global.j=${q}${j}${q})(global.j, global.r.replace(/${q}/g, ${q}'${q}), '${q}')];${r}`)")(global.j, global.r.replace(/"/g, "'"), '"')];eval(q=%q[puts(%Q[global.r='eval(q=%q[#{q.gsub(39.chr, 34.chr)}])';#{j}])])
