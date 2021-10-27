@@ -1,1 +1,1 @@
-Function("f", "q", global.f="console.log(`Function(${q}f${q}, ${q}q${q}, global.f=${q}${f}${q})(global.f, '${q}')`)")(global.f, '"')
+Function("j", "q", global.j="console.log(`Function(zjz, zqz, global.j=zjjz)(global.j, 'z')`.replace(/z/g, q).replace('jj', j))")(global.j, '"')
