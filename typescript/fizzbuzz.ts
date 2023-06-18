@@ -1,3 +1,5 @@
+// Inspired by https://nickangeli.com/posts/fizz-buzz-using-the-typescript-type-system/
+
 type Length<A extends unknown[]> = A extends { length: infer L } ? L & number : never
 
 type ARange<N extends number, Tuple extends unknown[] = []> = Length<Tuple> extends N
