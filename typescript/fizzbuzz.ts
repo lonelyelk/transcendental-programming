@@ -18,10 +18,10 @@ let a: LessThan<3, 2>
 let b: Length<[1,2,3]>
 let s: Add<10, 15>
 
-type IsDivisible<A extends number, B extends number, Accumulator extends number = B> = 
+type IsDivisible<A extends number, B extends number, Accumulator extends number = B> =
   A extends Accumulator
     ? true
-    : LessThan<A, Accumulator> extends true 
+    : LessThan<A, Accumulator> extends true
       ? false
       : IsDivisible<A, B, Add<Accumulator, B>>
 
@@ -31,9 +31,9 @@ let d: IsDivisible<6, 4>
 type IsDivisibleBy3<N extends number> = IsDivisible<N, 3>
 type IsDivisibleBy5<N extends number> = IsDivisible<N, 5>
 
-type Fizz = "Fizz"
-type Buzz = "Buzz"
-type FizzBuzz = "FizzBuzz"
+type Fizz = "fizz"
+type Buzz = "buzz"
+type FizzBuzz = "fizzbuzz"
 
 type TFizzBuzz<N extends number> =
   IsDivisibleBy3<N> extends true
@@ -45,11 +45,11 @@ type TFizzBuzz<N extends number> =
     : N
 
 type FizzBuzzRange<
-    A extends number, 
-    B extends number, 
+    A extends number,
+    B extends number,
     Tuple extends unknown[] = []
   > = A extends Add<B, 1>
     ? Tuple
     : FizzBuzzRange<Add<A, 1>, B, [...Tuple, TFizzBuzz<A>]>
 
-let fb: FizzBuzzRange<1, 16>
+let fb: FizzBuzzRange<1, 100>
