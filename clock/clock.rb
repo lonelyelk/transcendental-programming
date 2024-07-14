@@ -1,0 +1,11 @@
+eval($q=%w[trap(2){$i=1};z=[0xeaaae,0x88888,0xe2e8e,0xe8e8
+e,0x88eaa,0xe8e2e,0xeae2e,0x8888e,0xeaeae,0xe8eae];e=27.ch
+r+91.chr;h=e+';43m';r=e+'0m';j=1;loop{s="eval($q=%w[#$q]*'
+')##transcendental#kata##lonelyelk#".chars.reverse;n=(s.si
+ze/58.0).ceil;g=(n-5)/2.0;p=->{puts(58.times.map{s.pop}*''
+)};g.floor.times{p[]};5.times{|i|Time.now.strftime('%H:%M:
+%S').chars.each{|c|y,m=(c=~/\d/)&&[z[c.to_i],4]||[136,2];m
+.times{|x|print(((y&1<<(x+i*m)==0||(m==2&&j)||$j)&&'%s'||h
++'%s'+r)%(s.pop+s.pop))}};puts(s.pop+s.pop)};g.ceil.times{
+p[]};$j&&break;$j=$i;sleep(0.5);j=!j;print("\r"+e+n.to_s+?
+A);};puts(32.chr*58)]*'')##transcendental#kata##lonelyelk#
