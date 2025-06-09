@@ -94,5 +94,4 @@ const transform = (program) => {
     return encodeFromKnown(letters)(expression)
 }
 
-// console.log(letters)
-console.log(transform(`alert("!!''''''!!!!!!!!!'''''!!!!")`))
+console.log(transform(`console.log("hello world!")`))

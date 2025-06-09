@@ -1,1 +1,0 @@
-global.r='eval(q=%q[puts(%Q[global.r="eval(q=%q[#{q.gsub(39.chr, 34.chr)}])";#{j}])])';Function("j", "r", "q", global.j="console.log(`j=%Q[Function(zjz, zrz, zqz, global.j=zjjz)(global.j, global.r.replace(/z/g, z'z), 'z')];rr`.replace(/z/g, q).replace('rr', r).replace('jj', j))")(global.j, global.r.replace(/"/g, "'"), '"')
