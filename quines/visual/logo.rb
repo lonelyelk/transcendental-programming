@@ -1,23 +1,27 @@
-eval(q=%w!w=60;h=23;d=200;c=40;r=24;pi=3.14;s=32.chr;g=33.ch
-r;q="eval(q=%w#{g}#{q}#{g}.join)";z=->(x,y,m){m&&"\e[30;44m#
-{s}\e[0m"||s};o=->(f){h.times{|y|w.times{|x|print(z[x,y,f[[x
--w/2,y-h/2]]])};puts};sleep(0.07);print("\e[#{h}A")};l=->(fr
-,ph,s=true){dd=d*fr;dd.times.each_with_object({}){|j,o|x=r*M
-ath.cos(pi*2*j/dd*fr+ph);y=r*0.42*Math.sin(pi*2*j/dd);o[[x.r
-ound,y.round]]=true;o[[-x.round,y.round]]||=s;}};c.times{|i|
-o[l[1,3*pi/2*(1-Math.cos(pi*i/c/2))]]};z=->(x,y,m){m&&"\e[34
-m#{q[y*w+x]||?*}\e[0m"||s};c.times{|i|o[l[2,pi/2+2.828*pi*Ma
-th.sin(-pi/4+pi*i/c/2)**3,false]]};z=->(x,y,m){m&&s||(q[y*w+
-x]||?*)};c.times{|i|o[l[3,pi/3+pi*Math.sin(pi*i/c),false]]};
-z=->(x,y,m){m&&"\e[34m#{q[y*w+x]||?*}\e[0m"||(q[y*w+x]||?*)}
-;c.times{|i|o[l[1,pi/2+2.828*pi*Math.sin(-pi/4+pi*i/c/2)**3]
-]};l=->(ph){dd=d*2;dd.times.each_with_object({}){|j,o|x=r*Ma
-th.cos(pi*4*j/dd+ph);y=(j<dd/32||j>=31*dd/32)&&0.31-0.24*Mat
-h.cos(pi*8*j/dd);y||=j>=dd/32&&j<15*dd/32&&0.42*Math.sin(pi*
-4*j/dd);y||=j>=15*dd/32&&j<17*dd/32&&0.24*Math.cos(pi*8*j/dd
-)-0.31;y||=-0.42*Math.sin(pi*4*j/dd);y*=r;o[[x.round,y.round
-]]=true;}};c=20;z=->(x,y,m){m&&"\e[30;44m#{s}\e[0m"||(q[y*w+
-x]||?*)};c.times{|i|o[l[pi/2-4*pi*Math.sin(pi*i/c/2)/10]]};f
-=l[pi/10];z=->(x,y,m){m&&"\e[30;44m#{q[y*w+x]||?*}\e[0m"||(q
-[y*w+x]||?*)};c.times{o[f]};z=->(x,y,m){q[y*w+x]||?*};o[{}];
-print("\e[#{h}B")#lonelyelk#cresta#security#engineer#!.join)
+eval(q=%w!w=62;h=27;d=200;c=40;r=24;pi=3.14;s=32.chr;g=33.chr;
+e=27.chr;q="eval(q=%w#{g}#{q}#{g}.join)".chars;u=->(ph){k=d*2;
+k.times.each_with_object({}){|j,o|x=r*Math.cos(pi*4*j/k+ph);y=
+(j<k/32||j>=31*k/                             32)&&0.31-0.24*M
+ath.cos(pi*8*    j/k);y||=     j     >=k/32&&j    <15*k/32&&0.
+42*Math.si   n(pi*4*j     /k);y||=j>=     15*k/32&   &j<17*k/3
+2&&0.24*M  ath.cos(   pi*8*j/k)-0.31;y||=   -0.42*Ma  th.sin(p
+i*4*j/k)  ;y*=r;   o[[x.round,y.round]]=true   ;}};b=  u[pi/10
+];n=0;a  =h.ti   mes.map{|y|w.times.map{|x|t=b   [[x-w  /2,y-h
+/2]];t& &n+=  1;t&&q.sample||(q[y*w+x-n]||?#)}*''  };z= ->(x,y
+,m){m&& "#{  e}[30;44m#{s}#{e}[0m"||s};o=->(f){h.t  ime s{|y|w
+.times{ |x  |print(z[x,y,f[[x-w/2,y-h/2]]])};puts};     sleep(
+0.07);p   rint("#{e}[#{h}A")};l=->(fr,ph,s=true){k=d*fr;k.time
+s.each_w ith_object({}){|j,o|x=r*Math.cos(pi*2*j/k*fr+ph);y=r*
+0.42*Ma   th.sin(pi*2*j/k);o[[x.round,y.round]]=true;o[[-x.rou
+nd,y.ro un  d]]||=s;}};c.times{|i|o[l[1,3*pi/2*(1-M     ath.co
+s(pi*i/ c/2  ))]]};z=->(x,y,m){m&&"#{e}[34m#{a[y][  x]} #{e}[0
+m"||s}; c.ti  mes{|i|o[l[2,pi/2+2.828*pi*Math.sin (-pi/ 4+pi*i
+/c/2)**  3,fal   se]]};z=->(x,y,m){m&&s||a[y][   x]};c  .times
+{|i|o[l[  3,pi/3   +pi*Math.sin(pi*i/c),fals   e]]};z  =->(x,y
+,m){m&&"#  {e}[30;4   4m#{a[y][x]}#{e}[0m   "||a[y][  x]};c.ti
+mes{|i|o[l   [1,pi/2+     2.828*pi*Mat    h.sin(-p   i/4+pi*i/
+c/2)**3]]};c=    20;z=->(x     ,      y,m){m&&    "#{e}[30;44m
+#{s+e}[0m"||a[y][                              x]};c.times{|i|
+o[u[pi/2-4*pi*Math.sin(pi*i/c/2)/10]]};c.times{o[b]};z=->(x,y,
+m){m&&s||a[y][x]};o[b];print("#{e}[#{h}B")##lonelyelk##2025###
+##cresta##!.join)#############################################
