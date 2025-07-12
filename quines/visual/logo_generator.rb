@@ -42,5 +42,5 @@ c.times{|i|o[u[pi/2 - 4*pi*sin(pi*i/c/2)/10]]};
 c.times{o[b]};
 z=->(x,y,m){m&&s||a[y][x]};
 o[b];
-print("#{e}[#{h}B")
+puts("#{e}[#{h-1}B")
 ####lonelyelk##2025##cresta####!*'')

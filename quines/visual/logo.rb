@@ -21,5 +21,5 @@ m"||s} ;c.t   imes{|i|o[l[2,pi/2+2.828*pi*sin(pi*  i/c/2 -pi/4
 *pi*sin(p  i*i/c/2-p    i/4)**3,1]]};c=    20;z=->(x  ,y,m){m&
 &"#{e}[30;4   4m#{s+e}[0     m"||a     [y][x]};c.   times{|i|o
 [u[pi/2-4*pi*s                                   in(pi*i/c/2)/
-10]]};c.times{o[b]};z=->(x,y,m){m&&s||a[y][x]};o[b];print("#{e
-}[#{h}B")####lonelyelk##2025##cresta####!*'')#################
+10]]};c.times{o[b]};z=->(x,y,m){m&&s||a[y][x]};o[b];puts("#{e}
+[#{h-1}B")####lonelyelk##2025##cresta####!*'')################
