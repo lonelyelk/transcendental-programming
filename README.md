@@ -25,21 +25,17 @@ palindromic variants and cryptographic self-checksumming programs. It really cli
 I read the [mathematical proof][quine-article] that in any Turing-complete programming language it
 is possible to write a quine.
 
+Includes [visual quines](./quines/visual/) that create visual output, from ASCII art to animated
+displays.
+
 I also tried out Lean to write the proof down — see [proof](./proof/)
 
 ### [Constraints](./constraints/)
 
-Programming under artificial limitations, including lipograms (only letters/only symbols), size
-optimization, and maybe more in the future.
-
-### [Visual](./visual/)
-
-Programs (quines mostly) that create visual output, from ASCII art to animated displays.
-
-### [Golf](./golf/)
-
-The art of extreme brevity-solving problems with minimal characters while exploring the boundaries
-of syntax and language features.
+Programming under artificial limitations, including [lipograms](./constraints/lipograms/)
+(only letters/only symbols), size optimization, and [golf](./constraints/golf/) - the art of extreme
+brevity solving problems with minimal characters while exploring the boundaries of syntax and
+language features.
 
 ### [Other](./other/)
 
