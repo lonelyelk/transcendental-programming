@@ -1,4 +1,6 @@
-# Palindrome Quine
+# Quines with Constraints
+
+## Palindrome Quine
 
 With ruby it is sufficient to write just one half and it will work like a generator. Running:
 
@@ -17,4 +19,13 @@ To verify:
 ```ruby
 code = File.read('palindrome.rb')
 puts(code == code.chars.reverse.join)
+```
+
+## Quine with Symbols Only
+
+Using Ruby it is possible to write with all sorts of [constraints](../../constraints/lipograms/).
+This quine is written without the converter but uses similar principals:
+
+```shell
+ruby symbols_only.rb
 ```
