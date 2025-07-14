@@ -1,5 +1,7 @@
 # Transcendental Programming
 
+![head](./img/head.png)
+
 > Enjoy Programming regardless of practicality.
 > Forget usefulness, secular benefits, the weary world and just do programming.
 > Abuse a useful programming language to write a completely useless program.
