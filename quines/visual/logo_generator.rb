@@ -1,6 +1,6 @@
 eval(q=%w!
 include(Math);
-w = 62;
+w = 66;
 h=r = 25;
 d = 200;
 c = 40;
@@ -18,7 +18,7 @@ u = ->(ph){k=d*2;k.times.inject({}){|o,j|
   y *= r;
   o[[x.round,y.round]] = true;o
 }};
-b = u[pi/10];
+b = u[pi/9];
 n=0;
 a = h.times.map{|y|w.times.map{|x|t=b[[x-w/2,y-h/2]];t&&n+=1;t&&q.sample||(q[y*w+x-n]||?#)}*''};
 z=->(x,y,m){m&&"#{e}[30;44m#{s}#{e}[0m"||s};
@@ -35,12 +35,17 @@ c.times{|i|o[l[2, pi/2 + 2.828*pi*sin(pi*i/c/2-pi/4)**3]]};
 z=->(x,y,m){m&&s||a[y][x]};
 c.times{|i|o[l[3, pi/3 + pi*sin(pi*i/c)]]};
 z=->(x,y,m){m&&"#{e}[30;44m#{a[y][x]}#{e}[0m"||a[y][x]};
-c.times{|i|o[l[1, pi/2 + 2.828*pi*sin(pi*i/c/2-pi/4)**3,1]]};
+l = ->(ph){k=d*2;k.times.inject({}){|o,j|
+  x = (r*cos(pi*2*j/k)).round;
+  y = (r*0.42/(1+ph.abs)*(sin(pi*4*j/k) + ph*sin(pi*2*j/k))).round;
+  o[[x,y]] = 1;o
+}};
+c.times{|i|o[l[2*(2.0*i - c)/c]]};
 c = 20;
 z=->(x,y,m){m&&"#{e}[30;44m#{s+e}[0m"||a[y][x]};
-c.times{|i|o[u[pi/2 - 4*pi*sin(pi*i/c/2)/10]]};
+c.times{|i|o[u[4*pi/9 - 3*pi*sin(pi*i/c/2)/9]]};
 c.times{o[b]};
 z=->(x,y,m){m&&s||a[y][x]};
 o[b];
 puts("#{e}[#{h-1}B")
-####lonelyelk##2025##cresta####!*'')
+####lonelyelk~~2025~~cresta####!*'')
