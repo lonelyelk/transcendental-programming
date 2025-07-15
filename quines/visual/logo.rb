@@ -20,6 +20,6 @@ z=->(x,y ,m){m  &&s||a[y][x]};c.times{|i|o[l[3,pi/3  +pi*s in(pi*i
 k)).round  ;y=(r*0.4   2/(1+ph.abs)*(sin(pi*   4*j/k)+ph *sin(pi*2
 *j/k))).rou  nd;o[[x,y]    ]=1;o}};c.tim    es{|i|o[l[  2*(2.0*i-c
 )/c]]};c=20;    z=->(x,y,m)     {m&     &"#{e}[30;4    4m#{s+e}[0m
-"||a[y][x]};c.t                                     imes{|i|o[u[4*
-pi/9-3*pi*sin(pi*i/c/2)/9]]};c.times{o[b]};z=->(x,y,m){m&&s||a[y][
-x]};o[b];puts("#{e}[#{h-1}B")####lonelyelk~~2025~~cresta####!*'')#
+"||a[y][x]};c.t                                     imes{|i|o[u[pi
+*sin(pi*i/c/2)/9]]};c.times{o[b]};z=->(x,y,m){m&&s||a[y][x]};o[b];
+puts("#{e}[#{h-1}B");puts####lonelyelk~~2025~~cresta####!*'')#####

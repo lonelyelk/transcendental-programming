@@ -43,9 +43,9 @@ l = ->(ph){k=d*2;k.times.inject({}){|o,j|
 c.times{|i|o[l[2*(2.0*i - c)/c]]};
 c = 20;
 z=->(x,y,m){m&&"#{e}[30;44m#{s+e}[0m"||a[y][x]};
-c.times{|i|o[u[4*pi/9 - 3*pi*sin(pi*i/c/2)/9]]};
+c.times{|i|o[u[pi*sin(pi*i/c/2)/9]]};
 c.times{o[b]};
 z=->(x,y,m){m&&s||a[y][x]};
 o[b];
-puts("#{e}[#{h-1}B")
+puts("#{e}[#{h-1}B");puts
 ####lonelyelk~~2025~~cresta####!*'')
